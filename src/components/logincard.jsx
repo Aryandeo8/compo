@@ -27,7 +27,10 @@ export const Logincard = () => {
             />
           </div>
         {/* enter password */}
-        
+        <div>
+          <label className="">password</label>
+          input 
+        </div>
       </form>
     </div>
     </div>
