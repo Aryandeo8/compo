@@ -15,44 +15,54 @@ export const Logincard = () => {
         {/* title */}
         <h2 className="text-3xl font-bold text-white mb-8 text-center" >Welcome</h2>
         {/* Form */}
-        <form action="">
+        <form onSubmit={handleSubmit} className='space-y-6'>
           
           {/* enter email */}
             <div>
-              <label className="">email</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">email</label>
               <input 
               type="email"
               value={email}
               onChange={(e)=>setEmail(e.target.value)}
-              className=''
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white/5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter your email" 
               />
             </div>
           {/* enter password */}
           <div>
-            <label className="">password</label>
-            <div>
+            <label className="block text-sm font-medium text-gray-300 mb-1">password</label>
+            <div className="relative">
             <input 
             type={showPassword ? 'text' : 'password'}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className=""
+            className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white/5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Enter your password" 
             />
             <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className=""
-            >{showPassword ? '👁️' : '👁️🗨️'}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-500"
+            >{showPassword ? '👁️' : '🗨️'}
             </button>
             </div>
           </div>
-            <div className=''>
-              <button className=''>
-                <div className=''>
-                  <span className=''></span>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Sign In
+          </button>
+
+          {/* Social Login */}
+            <div className="flex items-center justify-center">
+              <button className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full border border-white/20 hover:border-white/30 transition-all">
+                <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-medium">G</span>
                 </div>
-                <span className=''></span>
+                <span className="text-white text-sm">Continue with Google</span>
               </button>
             </div>
         </form>
