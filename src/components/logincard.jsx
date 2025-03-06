@@ -11,9 +11,12 @@ export const Logincard = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">  
       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-md w-full mx-4 border-2 border-white/20 shadow-lg"> 
+        
+        {/* title */}
         <h2 className="text-3xl font-bold text-white mb-8 text-center" >Welcome</h2>
+        {/* Form */}
         <form action="">
-          {/* Form */}
+          
           {/* enter email */}
             <div>
               <label className="">email</label>
